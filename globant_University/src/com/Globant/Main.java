@@ -30,12 +30,7 @@ f. Exit*/
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Welcome to our university system, choose an option" +
-                "in this menu:");
-        University university = new University();
-        Class clase = new Class();
-        Teacher teacher = new Teacher(10, "Julio", 200.00, clase,20);
-        teacher.full_Time(5);
+        System.out.println("Welcome to our university system, choose an option" + "in this menu:");
 
     }
 }
