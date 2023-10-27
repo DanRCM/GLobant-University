@@ -4,17 +4,24 @@ public class Teacher {
     private int id;
     private String name;
     private Double salary;
-    private University university;
-    private int id_university;
-    private Class clase;
-    private int id_clase;
+    private ClassRoom clase;
 
-    public Teacher(int id, String name, Double salary, Class clase, int id_clase) {
+    public Teacher(int id, String name, Double salary, ClassRoom clase) {
         this.id = id;
         this.name = name;
         this.salary = salary;
         this.clase = clase;
-        this.id_clase = id_clase;
+    }
+
+    public Teacher(String name, double salary){
+        this.name = name;
+        this.salary = salary;
+    }
+
+    public Teacher(String name, Double salary, ClassRoom clase) {
+        this.name = name;
+        this.salary = salary;
+        this.clase = clase;
     }
 
     public int getId() {
@@ -41,35 +48,24 @@ public class Teacher {
         this.salary = salary;
     }
 
-    public University getUniversity() {
-        return university;
-    }
 
-    public void setUniversity(University university) {
-        this.university = university;
-    }
-
-    public int getId_university() {
-        return id_university;
-    }
-
-    public void setId_university(int id_university) {
-        this.id_university = id_university;
-    }
-
-    public Class getClase() {
+    public ClassRoom getClase() {
         return clase;
     }
 
-    public void setClase(Class clase) {
+    public void setClase(ClassRoom clase) {
         this.clase = clase;
     }
 
-    public int getId_clase() {
-        return id_clase;
+    public void calculateSalary(){
     }
 
-    public void setId_clase(int id_clase) {
-        this.id_clase = id_clase;
+    @Override
+    public String toString() {
+        return "Teacher: " +
+                "\nid=" + id +
+                "\nName='" + name + '\'' +
+                "\nSalary=" + salary +
+                "\nClass:" + clase;
     }
 }

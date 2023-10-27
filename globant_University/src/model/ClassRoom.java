@@ -1,16 +1,14 @@
 package model;
-import model.Student;
-import model.Teacher;
 
 import java.util.ArrayList;
 
-public class Class {
+public class ClassRoom {
     private String name;
     private String classroom;
     private ArrayList<Student> students;
     private Teacher teacher;
 
-    public Class(String name, String classroom, ArrayList<Student> students, Teacher teacher) {
+    public ClassRoom(String name, String classroom, ArrayList<Student> students, Teacher teacher) {
         this.name = name;
         this.classroom = classroom;
         this.students = students;
@@ -51,5 +49,14 @@ public class Class {
 
     public void addStudent(Student student){
         students.add(student);
+    }
+
+    @Override
+    public String toString() {
+        return "\nName='" + name + '\'' +
+                "\nClassroom='" + classroom + '\'' +
+                "\nTeacher: " + teacher.getName() +
+                "\nStudents= " + students;
+
     }
 }
