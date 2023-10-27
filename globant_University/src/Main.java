@@ -1,4 +1,3 @@
-package com.Globant;
 /*
 Java Basics Module Final Exercise I want to make a system to track my university
 classes, teachers and students. Each Teacher has a name, and a salary
@@ -30,7 +29,6 @@ f. Exit*/
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Welcome to our university system, choose an option" + "in this menu:");
 
     }
 }

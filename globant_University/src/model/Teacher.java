@@ -1,4 +1,4 @@
-package com.Globant;
+package model;
 
 public class Teacher {
     private int id;
@@ -15,18 +15,6 @@ public class Teacher {
         this.salary = salary;
         this.clase = clase;
         this.id_clase = id_clase;
-    }
-
-    public void full_Time(int years_experience){
-        double salary_original = this.salary;
-        System.out.println("Your salary is:" + this.salary);
-        this.salary *= (years_experience * 1.1);
-        System.out.println("Adding 110% to your " + years_experience + " years of service: " + (salary_original*(years_experience * 1.1)));
-        System.out.println("Total: " + this.salary);
-    }
-
-    public void part_Time(int hours_per_week){
-        this.salary *= hours_per_week;
     }
 
     public int getId() {

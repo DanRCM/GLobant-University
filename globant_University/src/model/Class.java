@@ -1,4 +1,7 @@
-package com.Globant;
+package model;
+import model.Student;
+import model.Teacher;
+
 import java.util.ArrayList;
 
 public class Class {
@@ -44,5 +47,9 @@ public class Class {
 
     public void setTeacher(Teacher teacher) {
         this.teacher = teacher;
+    }
+
+    public void addStudent(Student student){
+        students.add(student);
     }
 }
