@@ -6,12 +6,11 @@ public class PartTimeTeacher extends Teacher{
     public PartTimeTeacher(int id, String name, Double salary, ClassRoom clase, int activeHoursPerWeek) {
         super(id, name, salary, clase);
         this.activeHoursPerWeek = activeHoursPerWeek;
+        setSalary(calculateSalary());
     }
 
     @Override
-    public void calculateSalary(){
-        System.out.println("Your base salary multiplied for its active hours " +
-                "per week: $" + getSalary()*activeHoursPerWeek);
-        setSalary(getSalary()*activeHoursPerWeek);
+    public double calculateSalary(){
+        return getSalary()*activeHoursPerWeek;
     }
 }

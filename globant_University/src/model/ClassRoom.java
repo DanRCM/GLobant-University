@@ -14,11 +14,9 @@ public class ClassRoom {
         this.students = students;
         this.teacher = teacher;
     }
-
     public String getName() {
         return name;
     }
-
     public void setName(String name) {
         this.name = name;
     }

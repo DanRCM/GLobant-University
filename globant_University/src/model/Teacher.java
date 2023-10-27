@@ -57,7 +57,8 @@ public class Teacher {
         this.clase = clase;
     }
 
-    public void calculateSalary(){
+    public double calculateSalary(){
+        return 0;
     }
 
     @Override
