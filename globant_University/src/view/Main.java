@@ -17,9 +17,7 @@ public class Main {
         teachers.add(fullTimeTeacher);
         teachers.add(partTimeTeacher);
 
-        ClassController classController = new ClassController();
         StudentController studentController = new StudentController();
-        TeacherController teacherController = new TeacherController();
 
         ArrayList<Student> students = new ArrayList<>();
         students.add(new Student(1,"Rodrigo Borja", 12));
@@ -47,8 +45,8 @@ public class Main {
             System.out.println("Menu:");
             System.out.println("1. Print all the professors with their data");
             System.out.println("2. Print all the classes");
-            System.out.println("3. Create a new student and add it to an existing class");
-            System.out.println("4. Create a new class and add an existing teacher, existing students, and relevant data");
+            System.out.println("3. Create a new student");
+            System.out.println("4. Create a new class");
             System.out.println("5. List all the classes in which a given student is included");
             System.out.println("6. Exit");
             System.out.print("Enter your choice: ");
@@ -56,18 +54,18 @@ public class Main {
 
             switch (choice) {
                 case 1:
-                    teacherController.getAllTeachers(teachers);
+                    TeacherController.getAllTeachers(teachers);
                     break;
                 case 2:
-                    classController.getAllClassRoom(classes);
-                    classController.chooseClass(classes);
+                    ClassController.displayClassData(classes);
+                    ClassController.chooseClass(classes);
                     break;
                 case 3:
-                    Student student = studentController.createStudent();
+                    Student student = studentController.createStudent(students);
                     students.add(student);
                     break;
                 case 4:
-                    classes.add(classController.createClassRoom(students,teachers));
+                    classes.add(ClassController.createClassRoom(students,teachers));
                     break;
                 case 5:
                     int id;
