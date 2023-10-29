@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class StudentController {
-    public Student createStudent(){
+    public static Student createStudent(){
         int id;
         String name;
         int age;
@@ -23,7 +23,7 @@ public class StudentController {
         return new Student(id, name, age);
     }
 
-    public void searchStudent(ArrayList<ClassRoom> classrooms, int studentIdToSearch){
+    public static void searchStudent(ArrayList<ClassRoom> classrooms, int studentIdToSearch){
         for (ClassRoom classroom : classrooms) {
             ArrayList<Student> studentsInClass = classroom.getStudents();
             for (Student student : studentsInClass) {

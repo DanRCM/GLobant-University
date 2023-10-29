@@ -11,9 +11,6 @@ public class Student {
         this.age = age;
     }
 
-    public void addToClass(ClassRoom classRoom) {
-        classRoom.addStudent(this);
-    }
     public int getId() {
         return id;
     }

@@ -41,10 +41,6 @@ public class ClassRoom {
         return teacher;
     }
 
-    public void setTeacher(Teacher teacher) {
-        this.teacher = teacher;
-    }
-
     public void addStudent(Student student){
         students.add(student);
     }

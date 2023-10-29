@@ -3,7 +3,6 @@ package view;
 import model.*;
 import controller.*;
 
-import java.lang.Class;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -16,10 +15,6 @@ public class Main {
         PartTimeTeacher partTimeTeacher = new PartTimeTeacher(2,"Braulio Rivas",100.0,null, 40);
         teachers.add(fullTimeTeacher);
         teachers.add(partTimeTeacher);
-
-        ClassController classController = new ClassController();
-        StudentController studentController = new StudentController();
-        TeacherController teacherController = new TeacherController();
 
         ArrayList<Student> students = new ArrayList<>();
         students.add(new Student(1,"Rodrigo Borja", 12));
@@ -56,24 +51,24 @@ public class Main {
 
             switch (choice) {
                 case 1:
-                    teacherController.getAllTeachers(teachers);
+                    TeacherController.getAllTeachers(teachers);
                     break;
                 case 2:
-                    classController.getAllClassRoom(classes);
-                    classController.chooseClass(classes);
+                    ClassController.getAllClassRoom(classes);
+                    ClassController.chooseClass(classes);
                     break;
                 case 3:
-                    Student student = studentController.createStudent();
+                    Student student = StudentController.createStudent();
                     students.add(student);
                     break;
                 case 4:
-                    classes.add(classController.createClassRoom(students,teachers));
+                    classes.add(ClassController.createClassRoom(students,teachers));
                     break;
                 case 5:
                     int id;
                     System.out.println("Enter the student ID to find out the classes in which they are registered");
                     id = scanner.nextInt();
-                    studentController.searchStudent(classes, id);
+                    StudentController.searchStudent(classes, id);
                     break;
                 case 6:
                     System.out.println("Exiting...");

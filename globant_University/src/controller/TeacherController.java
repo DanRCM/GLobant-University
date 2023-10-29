@@ -6,7 +6,7 @@ import java.util.ArrayList;
 public class TeacherController {
     ArrayList<Teacher> teachers= new ArrayList<>();
 
-    public void getAllTeachers(ArrayList<Teacher> teachers){
+    public static void getAllTeachers(ArrayList<Teacher> teachers){
         int cont = 0;
         for (Teacher professor: teachers) {
             cont++;
