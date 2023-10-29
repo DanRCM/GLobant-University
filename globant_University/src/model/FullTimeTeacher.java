@@ -1,6 +1,6 @@
 package model;
 
-public class FullTimeTeacher extends Teacher{
+public class FullTimeTeacher extends Teacher implements TeachingRole{
     private int experienceYears;
     public FullTimeTeacher(int id, String name, Double salary, ClassRoom clase, int experienceYears) {
         super(id, name, salary, clase);

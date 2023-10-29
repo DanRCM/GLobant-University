@@ -10,11 +10,13 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int choice;
-        ArrayList<Teacher> teachers = new ArrayList<>();
+        ArrayList<TeachingRole> teachers = new ArrayList<>();
         FullTimeTeacher fullTimeTeacher = new FullTimeTeacher(1, "Julio Jordan", 200.0,null, 5);
         PartTimeTeacher partTimeTeacher = new PartTimeTeacher(2,"Braulio Rivas",100.0,null, 40);
         teachers.add(fullTimeTeacher);
         teachers.add(partTimeTeacher);
+
+        StudentController studentController = new StudentController();
 
         ArrayList<Student> students = new ArrayList<>();
         students.add(new Student(1,"Rodrigo Borja", 12));
@@ -42,8 +44,8 @@ public class Main {
             System.out.println("Menu:");
             System.out.println("1. Print all the professors with their data");
             System.out.println("2. Print all the classes");
-            System.out.println("3. Create a new student and add it to an existing class");
-            System.out.println("4. Create a new class and add an existing teacher, existing students, and relevant data");
+            System.out.println("3. Create a new student");
+            System.out.println("4. Create a new class");
             System.out.println("5. List all the classes in which a given student is included");
             System.out.println("6. Exit");
             System.out.print("Enter your choice: ");
@@ -54,11 +56,12 @@ public class Main {
                     TeacherController.getAllTeachers(teachers);
                     break;
                 case 2:
-                    ClassController.getAllClassRoom(classes);
+
+                    ClassController.displayClassData(classes);
                     ClassController.chooseClass(classes);
                     break;
                 case 3:
-                    Student student = StudentController.createStudent();
+                    Student student = studentController.createStudent(students);
                     students.add(student);
                     break;
                 case 4:

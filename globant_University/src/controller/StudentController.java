@@ -6,20 +6,33 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class StudentController {
-    public static Student createStudent(){
-        int id;
+
+    static Scanner sc = new Scanner(System.in);
+
+    public Student createStudent(ArrayList<Student> students){
+        int id = 0;
         String name;
         int age;
+        boolean confirmation = true;
 
-        Scanner sc = new Scanner(System.in);
+        sc = new Scanner(System.in);
         System.out.println("Give me information about the student");
         System.out.println("Name: ");
         name = sc.next();
         System.out.println("Id: ");
         id = sc.nextInt();
+        while(confirmation){
+            for (Student student: students) {
+                if(student.getId() == id){
+                    System.out.println("This ID is already registered, choose anyone please");
+                    id = sc.nextInt();
+                }else{
+                    confirmation = false;
+                }
+            }
+        }
         System.out.println("Age: ");
         age = sc.nextInt();
-
         return new Student(id, name, age);
     }
 
