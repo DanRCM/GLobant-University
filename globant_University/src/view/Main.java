@@ -16,8 +16,6 @@ public class Main {
         teachers.add(fullTimeTeacher);
         teachers.add(partTimeTeacher);
 
-        StudentController studentController = new StudentController();
-
         ArrayList<Student> students = new ArrayList<>();
         students.add(new Student(1,"Rodrigo Borja", 12));
         students.add(new Student(2,"Carlos Cortez", 11));
@@ -61,7 +59,7 @@ public class Main {
                     ClassController.chooseClass(classes);
                     break;
                 case 3:
-                    Student student = studentController.createStudent(students);
+                    Student student = StudentController.createStudent(students);
                     students.add(student);
                     break;
                 case 4:

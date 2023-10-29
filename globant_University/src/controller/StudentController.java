@@ -9,7 +9,7 @@ public class StudentController {
 
     static Scanner sc = new Scanner(System.in);
 
-    public Student createStudent(ArrayList<Student> students){
+    public static Student createStudent(ArrayList<Student> students){
         int id = 0;
         String name;
         int age;
