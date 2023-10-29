@@ -3,7 +3,7 @@ package model;
 public class Teacher {
     private int id;
     private String name;
-    private Double salary;
+    private double salary;
     private ClassRoom clase;
 
     public Teacher(int id, String name, Double salary, ClassRoom clase) {
@@ -40,7 +40,7 @@ public class Teacher {
         this.name = name;
     }
 
-    public Double getSalary() {
+    public double getSalary() {
         return salary;
     }
 

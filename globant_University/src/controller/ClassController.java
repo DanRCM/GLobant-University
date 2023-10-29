@@ -3,6 +3,7 @@ package controller;
 import model.ClassRoom;
 import model.Student;
 import model.Teacher;
+import model.TeachingRole;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -16,6 +17,7 @@ public class ClassController {
             cont++;
             System.out.println(cont + ". " + classroom.getClassroom());
         }
+        cont = 0;
     }
     public void displayClassData(ArrayList<ClassRoom> classes){
         int cont = 0;
@@ -42,7 +44,7 @@ public class ClassController {
         System.out.println("Thank you");
     }
 
-    public ClassRoom createClassRoom(ArrayList<Student> student, ArrayList<Teacher> teacher){
+    public ClassRoom createClassRoom(ArrayList<Student> student, ArrayList<TeachingRole> teacher){
         String name, roomNumber;
         int optionTeacher;
         System.out.println("Give me information about the new class");
@@ -53,6 +55,6 @@ public class ClassController {
         System.out.println("Choose a teacher for this class");
         teacherController.getAllTeachers(teacher);
         optionTeacher = sc.nextInt();
-        return new ClassRoom(name, roomNumber, student, teacher.get(optionTeacher-1));
+        return new ClassRoom(name, roomNumber, student, (Teacher) teacher.get(optionTeacher-1));
     }
 }

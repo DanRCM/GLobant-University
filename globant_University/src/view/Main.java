@@ -11,7 +11,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int choice;
-        ArrayList<Teacher> teachers = new ArrayList<>();
+        ArrayList<TeachingRole> teachers = new ArrayList<>();
         FullTimeTeacher fullTimeTeacher = new FullTimeTeacher(1, "Julio Jordan", 200.0,null, 5);
         PartTimeTeacher partTimeTeacher = new PartTimeTeacher(2,"Braulio Rivas",100.0,null, 40);
         teachers.add(fullTimeTeacher);

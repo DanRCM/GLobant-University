@@ -1,14 +1,15 @@
 package controller;
 import model.Teacher;
+import model.TeachingRole;
 
 import java.util.ArrayList;
 
 public class TeacherController {
     ArrayList<Teacher> teachers= new ArrayList<>();
 
-    public void getAllTeachers(ArrayList<Teacher> teachers){
+    public void getAllTeachers(ArrayList<TeachingRole> teachers){
         int cont = 0;
-        for (Teacher professor: teachers) {
+        for (TeachingRole professor: teachers) {
             cont++;
             System.out.println(cont +". " + professor.getName());
             System.out.println("ID: " + professor.getId());
