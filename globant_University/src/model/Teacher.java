@@ -13,15 +13,22 @@ public class Teacher {
         this.clase = clase;
     }
 
-    public Teacher(String name, double salary){
-        this.name = name;
-        this.salary = salary;
-    }
-
     public Teacher(String name, Double salary, ClassRoom clase) {
         this.name = name;
         this.salary = salary;
         this.clase = clase;
+    }
+
+    public void full_Time(int years_experience){
+        double salary_original = this.salary;
+        System.out.println("Your salary is:" + this.salary);
+        this.salary *= (years_experience * 1.1);
+        System.out.println("Adding 110% to your " + years_experience + " years of service: " + (salary_original*(years_experience * 1.1)));
+        System.out.println("Total: " + this.salary);
+    }
+
+    public void part_Time(int hours_per_week){
+        this.salary *= hours_per_week;
     }
 
     public int getId() {
@@ -47,7 +54,6 @@ public class Teacher {
     public void setSalary(Double salary) {
         this.salary = salary;
     }
-
 
     public ClassRoom getClase() {
         return clase;
